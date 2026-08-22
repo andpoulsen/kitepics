@@ -21,9 +21,10 @@ Keep the Linear issue status aligned with the actual workflow:
 3. After the pull request is merged, leave the issue in `In Review` while the post-merge deployment and verification are running.
 4. Identify the GitHub Pages Action run for the merge commit and wait until it has completed with a successful conclusion.
 5. Only after that successful Action run, load and check the live site. For user-facing changes, include visual verification at the agreed desktop and mobile viewport sizes.
-6. Move the issue to `Done` only after the pull request is merged and closed, the deployment Action has completed successfully, and the live site has passed the required functional and visual checks.
+6. Record the verification evidence in Linear, such as the merge commit, Action run, live URL, and screenshot or visual-diff result, and wait for the comment or attachment operation to succeed.
+7. Only then, as a separate final operation, move the issue to `Done` and read the issue back to confirm that the status is actually `Done`.
 
-Never move an issue to `Done` immediately after merge. Do not start the live-site check before the deployment Action for that merge has completed successfully. Do not mark an issue `Done` merely because the code is committed, the pull request is approved, or the deployment job succeeds without the subsequent live-site check.
+Never move an issue to `Done` immediately after merge. Do not start the live-site check before the deployment Action for that merge has completed successfully. Do not mark an issue `Done` merely because the code is committed, the pull request is approved, or the deployment job succeeds without the subsequent live-site check. The `Done` mutation must never run in parallel with Action polling, the live-site check, a Linear comment, or an attachment upload; all preceding steps must be awaited and complete successfully first.
 
 ## Verification before merge
 
@@ -42,6 +43,21 @@ Never move an issue to `Done` immediately after merge. Do not start the live-sit
 5. Check the deployed site at the same desktop and mobile viewport sizes used locally.
 6. Capture matching post-deployment screenshots, or produce an equivalent visual-diff result.
 7. Compare the local and deployed results and investigate any unexplained visual or functional regression.
-8. Only after these checks pass, move the related Linear issue to `Done`.
+8. Record the evidence in Linear and wait for the successful response.
+9. As the final serialized step, move the related Linear issue to `Done`.
+10. Read the issue back and confirm that Linear reports `Done`; if it does not, stop and investigate instead of assuming completion.
 
 Do not treat a successful deployment job or HTTP 200 response as sufficient on its own. The deployed site's appearance and important assets must also be checked.
+
+## Completion gate
+
+The finalization sequence is a hard gate, not a checklist to perform concurrently:
+
+1. `merge` the pull request.
+2. Wait for the GitHub Pages Action for that exact merge commit to report terminal `success`.
+3. Check the deployed site and capture the required evidence.
+4. Await the successful Linear comment or attachment operation.
+5. Call the Linear status update to `Done` as a standalone operation.
+6. Read the issue back and verify the resulting status.
+
+If any step fails or its result is ambiguous, keep the issue in `In Review` and resolve the ambiguity before changing the status.
