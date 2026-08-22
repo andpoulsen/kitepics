@@ -8,8 +8,9 @@ These rules apply to all future code changes in this repository.
 2. Create an issue-specific feature branch before editing code. Use a name that includes the Linear issue identifier, for example `feature/kit-14-asset-structure`.
 3. Keep the change scoped to the issue and commit it on the feature branch.
 4. Push the feature branch and open a pull request targeting `main`.
-5. Review the pull request. Self-approval is acceptable when appropriate.
-6. Merge to `main` only after the local checks and visual verification pass.
+5. If the work comes from a Linear issue, include the Linear issue identifier in the pull request title, for example `KIT-14: Asset structure`.
+6. Review the pull request. Self-approval is acceptable when appropriate.
+7. Merge to `main` only after the local checks and visual verification pass.
 
 ## Linear issue status
 
