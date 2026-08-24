@@ -10,7 +10,7 @@
 <body>
 
 <!-- Nautical map SVG background -->
-<svg xmlns="http://www.w3.org/2000/svg" style="position:fixed;inset:0;width:100%;height:100%;z-index:0;opacity:0.38;pointer-events:none" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="position:fixed;inset:0;width:100%;height:100%;z-index:0;opacity:0.38;pointer-events:none" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
   <defs>
     <style>
       .water { fill: rgba(90,130,160,0.18); }
@@ -98,7 +98,7 @@
   <text x="200" y="865" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-style="italic" fill="rgba(50,35,10,0.45)">55°18'N  11°59'E</text>
 </svg>
 
-<div class="page">
+<main class="page">
 
   <header>
     <p class="chart-label">Kite Session · Storstrømmen · Denmark</p>
@@ -107,25 +107,28 @@
     <p class="position-line">55° 18' N &nbsp;·&nbsp; 11° 59' E &nbsp;·&nbsp; Wind SSW · Force 4–5</p>
   </header>
 
-  <p class="intro">
-    From a session of 459 photographs taken on the waters off Farø, these ten images stand apart —
-    each telling a distinct story of wind, water and the Farø bridges. Two cameras, one location,
-    one day on Storstrømmen.
-  </p>
+  <section class="intro" aria-labelledby="intro-title">
+    <h2 id="intro-title" class="visually-hidden">About the selection</h2>
+    <p>
+      From a session of 459 photographs taken on the waters off Farø, these ten images stand apart —
+      each telling a distinct story of wind, water and the Farø bridges. Two cameras, one location,
+      one day on Storstrømmen.
+    </p>
+  </section>
 
-  <p class="section-title"><span>The Selection</span></p>
+  <h2 id="selection-title" class="section-title"><span>The Selection</span></h2>
 
-  <div class="picks">
+  <section class="picks" aria-labelledby="selection-title">
 
     <!-- 1 · DSC05270 — Splash action -->
-    <div class="pick" data-rank="No. I · Best Action Shot">
-      <div class="pick-image">
+    <article class="pick" data-rank="No. I · Best Action Shot">
+      <figure class="pick-image">
         <img src="assets/images/DSC05270.jpg" alt="Massive spray carving shot – DSC05270">
-        <p class="filename">DSC05270.ARW · Sony Alpha · RAW</p>
-      </div>
+        <figcaption class="filename">DSC05270.ARW · Sony Alpha · RAW</figcaption>
+      </figure>
       <div class="pick-text">
-        <span class="medal">🥇</span>
-        <div class="stars">★★★★★</div>
+        <span class="medal" aria-hidden="true">🥇</span>
+        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
         <h2>Full Send</h2>
         <span class="tag">Best Action · Spray &amp; Power</span>
         <p>
@@ -145,17 +148,17 @@
           +30, add clarity +20, and consider a slight warm grade to bring out the green water.
         </p>
       </div>
-    </div>
+    </article>
 
     <!-- 2 · DSC05340 — Panning/speed -->
-    <div class="pick reverse" data-rank="No. II · Speed &amp; Motion">
-      <div class="pick-image">
+    <article class="pick reverse" data-rank="No. II · Speed &amp; Motion">
+      <figure class="pick-image">
         <img src="assets/images/DSC05340.jpg" alt="Panning speed shot – DSC05340">
-        <p class="filename">DSC05340.ARW · Sony Alpha · RAW</p>
-      </div>
+        <figcaption class="filename">DSC05340.ARW · Sony Alpha · RAW</figcaption>
+      </figure>
       <div class="pick-text">
-        <span class="medal">🥈</span>
-        <div class="stars">★★★★★</div>
+        <span class="medal" aria-hidden="true">🥈</span>
+        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
         <h2>Blur of Speed</h2>
         <span class="tag">Best Motion · Sense of Velocity</span>
         <p>
@@ -175,17 +178,17 @@
           16:9 or 2:1 panoramic ratio will amplify the sense of lateral speed.
         </p>
       </div>
-    </div>
+    </article>
 
     <!-- 3 · DSC_0170 — Wide landscape -->
-    <div class="pick" data-rank="No. III · Best Landscape">
-      <div class="pick-image">
+    <article class="pick" data-rank="No. III · Best Landscape">
+      <figure class="pick-image">
         <img src="assets/images/DSC_0170.jpg" alt="Farø Bridge full span – DSC_0170">
-        <p class="filename">DSC_0170.JPG · Nikon</p>
-      </div>
+        <figcaption class="filename">DSC_0170.JPG · Nikon</figcaption>
+      </figure>
       <div class="pick-text">
-        <span class="medal">🥉</span>
-        <div class="stars">★★★★★</div>
+        <span class="medal" aria-hidden="true">🥉</span>
+        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
         <h2>Under the Farø Bridge</h2>
         <span class="tag">Best Landscape · Sense of Place</span>
         <p>
@@ -204,16 +207,16 @@
           clarity boost to the bridge cables will make this exceptional.
         </p>
       </div>
-    </div>
+    </article>
 
     <!-- 4 · DSC_0195 — Bridge composition -->
-    <div class="pick reverse" data-rank="No. IV · Best Composition">
-      <div class="pick-image">
+    <article class="pick reverse" data-rank="No. IV · Best Composition">
+      <figure class="pick-image">
         <img src="assets/images/DSC_0195.jpg" alt="Rider framed between bridge pylons – DSC_0195">
-        <p class="filename">DSC_0195.JPG · Nikon</p>
-      </div>
+        <figcaption class="filename">DSC_0195.JPG · Nikon</figcaption>
+      </figure>
       <div class="pick-text">
-        <div class="stars">★★★★☆</div>
+        <div class="stars" role="img" aria-label="4 out of 5 stars">★★★★☆</div>
         <h2>Framed by the Pylons</h2>
         <span class="tag">Best Composition · Symmetry</span>
         <p>
@@ -232,16 +235,16 @@
           Pairs beautifully as a diptych with No. I.
         </p>
       </div>
-    </div>
+    </article>
 
     <!-- 5 · DSC_0300 — Graphic kite+rider+bridge -->
-    <div class="pick" data-rank="No. V · Best Graphic Composition">
-      <div class="pick-image">
+    <article class="pick" data-rank="No. V · Best Graphic Composition">
+      <figure class="pick-image">
         <img src="assets/images/DSC_0300.jpg" alt="Kite fills upper frame – DSC_0300">
-        <p class="filename">DSC_0300.JPG · Nikon</p>
-      </div>
+        <figcaption class="filename">DSC_0300.JPG · Nikon</figcaption>
+      </figure>
       <div class="pick-text">
-        <div class="stars">★★★★☆</div>
+        <div class="stars" role="img" aria-label="4 out of 5 stars">★★★★☆</div>
         <h2>The Kite, the Rider &amp; the Bridge</h2>
         <span class="tag">Best Graphic · All Three Elements</span>
         <p>
@@ -260,16 +263,16 @@
           The upper-left sky is ideal for overlaid title text.
         </p>
       </div>
-    </div>
+    </article>
 
     <!-- 6 · DSC_0379 — Portrait -->
-    <div class="pick portrait reverse" data-rank="No. VI · Best Portrait">
-      <div class="pick-image">
+    <article class="pick portrait reverse" data-rank="No. VI · Best Portrait">
+      <figure class="pick-image">
         <img src="assets/images/DSC_0379.jpg" alt="Smiling portrait close-up – DSC_0379">
-        <p class="filename">DSC_0379.JPG · Nikon</p>
-      </div>
+        <figcaption class="filename">DSC_0379.JPG · Nikon</figcaption>
+      </figure>
       <div class="pick-text">
-        <div class="stars">★★★★☆</div>
+        <div class="stars" role="img" aria-label="4 out of 5 stars">★★★★☆</div>
         <h2>The Smile After the Session</h2>
         <span class="tag">Best Portrait · Human Story</span>
         <p>
@@ -287,16 +290,16 @@
           Pairs as a strong diptych alongside No. III or No. IV.
         </p>
       </div>
-    </div>
+    </article>
 
     <!-- 7 · DSC_0144 — Extreme panning blur -->
-    <div class="pick reverse" data-rank="No. VII · Maximum Motion Blur">
-      <div class="pick-image">
+    <article class="pick reverse" data-rank="No. VII · Maximum Motion Blur">
+      <figure class="pick-image">
         <img src="assets/images/DSC_0144.jpg" alt="Extreme panning blur – DSC_0144">
-        <p class="filename">DSC_0144.JPG · Nikon</p>
-      </div>
+        <figcaption class="filename">DSC_0144.JPG · Nikon</figcaption>
+      </figure>
       <div class="pick-text">
-        <div class="stars">★★★★★</div>
+        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
         <h2>Full Pan</h2>
         <span class="tag">Maximum Motion Blur · Speed Abstract</span>
         <p>
@@ -318,16 +321,16 @@
           soft background wash.
         </p>
       </div>
-    </div>
+    </article>
 
     <!-- 8 · DSC_0342 — No-bridge spray -->
-    <div class="pick" data-rank="No. VIII · Best Open-Water Spray">
-      <div class="pick-image">
+    <article class="pick" data-rank="No. VIII · Best Open-Water Spray">
+      <figure class="pick-image">
         <img src="assets/images/DSC_0342.jpg" alt="Hard carve with forest backdrop – DSC_0342">
-        <p class="filename">DSC_0342.JPG · Nikon</p>
-      </div>
+        <figcaption class="filename">DSC_0342.JPG · Nikon</figcaption>
+      </figure>
       <div class="pick-text">
-        <div class="stars">★★★★★</div>
+        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
         <h2>Clean Air, Open Water</h2>
         <span class="tag">Best Open-Water · No Bridge</span>
         <p>
@@ -346,16 +349,16 @@
           keeps the eye locked on the spray and rider.
         </p>
       </div>
-    </div>
+    </article>
 
     <!-- 8 · DSC_0271 — Smiling while riding -->
-    <div class="pick reverse" data-rank="No. IX · Smiling in Action">
-      <div class="pick-image">
+    <article class="pick reverse" data-rank="No. IX · Smiling in Action">
+      <figure class="pick-image">
         <img src="assets/images/DSC_0271.jpg" alt="Rider smiling towards camera while riding – DSC_0271">
-        <p class="filename">DSC_0271.JPG · Nikon</p>
-      </div>
+        <figcaption class="filename">DSC_0271.JPG · Nikon</figcaption>
+      </figure>
       <div class="pick-text">
-        <div class="stars">★★★★★</div>
+        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
         <h2>Pure Joy on the Water</h2>
         <span class="tag">Best Expression · In Motion</span>
         <p>
@@ -375,16 +378,16 @@
           location grounding without dominating. A slight crop to 4:3 tightens the composition.
         </p>
       </div>
-    </div>
+    </article>
 
     <!-- 9 · DSC_0377 — Smiling coming in -->
-    <div class="pick portrait" data-rank="No. X · Best Human Moment">
-      <div class="pick-image">
+    <article class="pick portrait" data-rank="No. X · Best Human Moment">
+      <figure class="pick-image">
         <img src="assets/images/DSC_0377.jpg" alt="Rider grinning in the surf with board – DSC_0377">
-        <p class="filename">DSC_0377.JPG · Nikon</p>
-      </div>
+        <figcaption class="filename">DSC_0377.JPG · Nikon</figcaption>
+      </figure>
       <div class="pick-text">
-        <div class="stars">★★★★☆</div>
+        <div class="stars" role="img" aria-label="4 out of 5 stars">★★★★☆</div>
         <h2>That Run Was Good</h2>
         <span class="tag">Best Human Moment · Authentic</span>
         <p>
@@ -403,12 +406,12 @@
           bookend alongside one of the wide horizontal landscape shots.
         </p>
       </div>
-    </div>
+    </article>
 
-  </div>
+  </section>
 
   <div class="compass-wrap">
-    <svg width="80" height="80" viewBox="-50 -50 100 100" xmlns="http://www.w3.org/2000/svg">
+    <svg width="80" height="80" viewBox="-50 -50 100 100" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
       <circle cx="0" cy="0" r="46" fill="none" stroke="rgba(100,75,30,0.3)" stroke-width="1"/>
       <polygon points="0,-40 5,-15 0,-8 -5,-15" fill="rgba(100,75,30,0.55)"/>
       <polygon points="0,40 5,15 0,8 -5,15" fill="rgba(210,185,115,0.9)" stroke="rgba(100,75,30,0.35)" stroke-width="0.5"/>
@@ -425,6 +428,6 @@
     <p style="margin-top:6px">459 Photographs Reviewed &nbsp;·&nbsp; 10 Selected</p>
   </footer>
 
-</div>
+</main>
 </body>
 </html>
