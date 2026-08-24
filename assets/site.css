@@ -75,6 +75,18 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
   body {
     min-height: 100vh;
     font-family: var(--font-body);
@@ -221,7 +233,14 @@
   .pick.reverse .pick-text  { order: 1; }
   .pick.portrait { grid-template-columns: var(--portrait-image-width) 1fr; }
 
-  .pick-image a { display: block; cursor: zoom-in; }
+  .pick-image a {
+    display: block;
+    cursor: zoom-in;
+  }
+  .pick-image a:focus-visible {
+    outline: var(--border-emphasis) solid var(--color-ink-deep);
+    outline-offset: 5px;
+  }
   .pick-image img {
     width: 100%;
     display: block;
@@ -294,4 +313,13 @@
     .pick, .pick.portrait, .pick.reverse { grid-template-columns: 1fr; }
     .pick.reverse .pick-image { order: 0; }
     .pick.reverse .pick-text  { order: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
   }
