@@ -6,7 +6,7 @@ test('static site loads its design system and photo interactions', async ({ page
     if (message.type() === 'error') consoleErrors.push(message.text());
   });
 
-  await page.goto('/');
+  await page.goto('./');
   await expect(page).toHaveTitle('Kite Session — Farø · May 30 2026 · Poster Picks');
   await expect(page.locator('link[rel="stylesheet"][href="assets/site.css"]')).toHaveCount(1);
   await expect(page.locator('script[src="assets/site.js"][defer]')).toHaveCount(1);
