@@ -18,3 +18,13 @@ https://andpoulsen.github.io/kitepics/
 ## Development workflow
 
 All code changes must follow the project workflow in [AGENTS.md](AGENTS.md): use an issue-specific feature branch, verify the site locally, open a pull request to `main`, merge only after the checks pass, and verify the deployed GitHub Pages site afterward.
+
+Install the local browser test dependency and run the desktop/mobile site checks with:
+
+```sh
+npm install
+npx playwright install chromium
+npm run test:site
+```
+
+The test runner starts the static site locally and saves viewport screenshots in its test output.
