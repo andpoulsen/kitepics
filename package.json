@@ -6,7 +6,11 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test:site": "playwright test"
+    "test:site": "playwright test",
+    "format": "prettier --write \"index.html\" \"src/**/*.{js,svelte,css}\" \"tests/**/*.js\" \"*.md\" \"*.json\" \"*.js\" \".github/workflows/*.yml\"",
+    "format:check": "prettier --check \"index.html\" \"src/**/*.{js,svelte,css}\" \"tests/**/*.js\" \"*.md\" \"*.json\" \"*.js\" \".github/workflows/*.yml\"",
+    "validate:html": "html-validate index.html",
+    "check": "npm run format:check && npm run validate:html && npm run build && npm run test:site"
   },
   "dependencies": {
     "svelte": "latest"
@@ -14,6 +18,9 @@
   "devDependencies": {
     "@playwright/test": "latest",
     "@sveltejs/vite-plugin-svelte": "latest",
+    "html-validate": "^11.11.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-svelte": "^4.1.1",
     "vite": "latest"
   }
 }

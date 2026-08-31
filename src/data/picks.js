@@ -144,7 +144,7 @@ const picks = [
     tag: 'Best Human Moment · Authentic',
     portrait: true,
     body: [
-      'A close-up in the shallows: board tucked under one arm, kite bar raised, eyes bright, and a grin that says exactly how that last run went. The choppy grey water fills the background, keeping the focus squarely on the rider\'s face and energy.',
+      "A close-up in the shallows: board tucked under one arm, kite bar raised, eyes bright, and a grin that says exactly how that last run went. The choppy grey water fills the background, keeping the focus squarely on the rider's face and energy.",
       'Different in character from both the portrait (No. VI) and the mid-ride smile (No. IX) — this one captures the moment between rides, the look back toward the camerawoman that is equal parts post-run euphoria and something rather more personal. It is raw, unposed, and completely alive.',
     ],
     note: '⚙ Ideal as an inset or companion image. The portrait orientation makes it a natural bookend alongside one of the wide horizontal landscape shots.',

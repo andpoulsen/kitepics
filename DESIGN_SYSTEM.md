@@ -15,15 +15,15 @@ Tokens live in `src/site.css` under `:root`.
 
 ### Color
 
-| Token | Use |
-| --- | --- |
-| `--color-paper` | Main page background |
+| Token                                                                                  | Use                             |
+| -------------------------------------------------------------------------------------- | ------------------------------- |
+| `--color-paper`                                                                        | Main page background            |
 | `--color-paper-light`, `--color-paper-mid`, `--color-paper-deep`, `--color-paper-soft` | Paper and map background layers |
-| `--color-ink`, `--color-ink-deep` | Body and heading text |
-| `--color-ink-soft`, `--color-ink-note` | Supporting and note text |
-| `--color-panel`, `--color-panel-subtle` | Intro and pick card surfaces |
-| `--color-border`, `--color-border-soft`, `--color-border-card` | Component borders |
-| `--color-rank`, `--color-star` | Rank badges and rating stars |
+| `--color-ink`, `--color-ink-deep`                                                      | Body and heading text           |
+| `--color-ink-soft`, `--color-ink-note`                                                 | Supporting and note text        |
+| `--color-panel`, `--color-panel-subtle`                                                | Intro and pick card surfaces    |
+| `--color-border`, `--color-border-soft`, `--color-border-card`                         | Component borders               |
+| `--color-rank`, `--color-star`                                                         | Rank badges and rating stars    |
 
 Use the most specific semantic token available. Add a new token only when a value represents a distinct design role.
 
@@ -45,19 +45,19 @@ Use the most specific semantic token available. Add a new token only when a valu
 
 ## Components
 
-| Component | Selector or markup | Guidance |
-| --- | --- | --- |
-| Page shell | `.page` | Centers content and controls the page width and outer spacing. |
-| Header | `header`, `.chart-label`, `.subtitle`, `.position-line` | Uses display typography and the paper divider treatment. |
-| Intro block | `.intro` | A centered italic summary on the panel surface. |
-| Section title | `.section-title`, `.section-title span` | Uses small caps and horizontal rules. |
-| Pick list | `.picks` | Maintains the vertical rhythm between selected photos. |
-| Pick card | `src/components/PickCard.svelte`, `.pick`, `.pick.reverse`, `.pick.portrait` | Renders one data object with the two-column editorial layout and responsive stacking. |
-| Image frame | `.pick-image`, `.pick-image a`, `.pick-image img` | Keeps images clickable, framed, and visually consistent. |
-| Metadata | `.filename`, `.tag`, `.stars` | Uses small caps, restrained borders, and the star token. |
-| Pick copy | `.pick-text`, `.pick-text h2`, `.pick-text p`, `.note` | Keeps heading, body, and editorial note hierarchy consistent. |
-| Decorative compass | `.compass-wrap` | Provides a quiet closing ornament after the selection. |
-| Footer | `footer` | Uses small caps, a top rule, and the footer color token. |
+| Component          | Selector or markup                                                           | Guidance                                                                              |
+| ------------------ | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Page shell         | `.page`                                                                      | Centers content and controls the page width and outer spacing.                        |
+| Header             | `header`, `.chart-label`, `.subtitle`, `.position-line`                      | Uses display typography and the paper divider treatment.                              |
+| Intro block        | `.intro`                                                                     | A centered italic summary on the panel surface.                                       |
+| Section title      | `.section-title`, `.section-title span`                                      | Uses small caps and horizontal rules.                                                 |
+| Pick list          | `.picks`                                                                     | Maintains the vertical rhythm between selected photos.                                |
+| Pick card          | `src/components/PickCard.svelte`, `.pick`, `.pick.reverse`, `.pick.portrait` | Renders one data object with the two-column editorial layout and responsive stacking. |
+| Image frame        | `.pick-image`, `.pick-image a`, `.pick-image img`                            | Keeps images clickable, framed, and visually consistent.                              |
+| Metadata           | `.filename`, `.tag`, `.stars`                                                | Uses small caps, restrained borders, and the star token.                              |
+| Pick copy          | `.pick-text`, `.pick-text h2`, `.pick-text p`, `.note`                       | Keeps heading, body, and editorial note hierarchy consistent.                         |
+| Decorative compass | `.compass-wrap`                                                              | Provides a quiet closing ornament after the selection.                                |
+| Footer             | `footer`                                                                     | Uses small caps, a top rule, and the footer color token.                              |
 
 ## Content model
 
