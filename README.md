@@ -8,12 +8,14 @@ https://andpoulsen.github.io/kitepics/
 
 ## Repository layout
 
-* `index.html` is the static page entry point.
-* `assets/images/` contains the photo assets used by the page.
-* `assets/site.css` contains the shared site styles and design tokens.
-* `assets/site.js` contains the image-link behavior.
+* `index.html` is the Vite HTML entry point.
+* `src/App.svelte` composes the page and its semantic structure.
+* `src/components/` contains the reusable Svelte components.
+* `src/data/picks.js` contains the editable photo content data.
+* `src/site.css` contains the shared site styles and design tokens.
+* `public/assets/images/` contains the photo assets copied to the static build.
 * `DESIGN_SYSTEM.md`, `README.md`, and `AGENTS.md` contain project and maintenance documentation.
-* `.github/workflows/pages.yml` deploys the repository to GitHub Pages from `main`.
+* `.github/workflows/pages.yml` builds and deploys the repository to GitHub Pages from `main`.
 
 ## Development workflow
 
@@ -27,4 +29,4 @@ npx playwright install chromium
 npm run test:site
 ```
 
-The test runner starts the static site locally and saves viewport screenshots in its test output.
+The test runner starts the Vite development server locally and saves viewport screenshots in its test output. To build and preview the production files manually, run `npm run build` followed by `npm run preview`.

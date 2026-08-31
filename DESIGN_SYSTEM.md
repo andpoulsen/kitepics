@@ -1,17 +1,17 @@
 # Kitepics Design System
 
-This is a small CSS-first design system for the static Kitepics site. It keeps the existing nautical poster identity while giving future edits a shared vocabulary.
+This is a small CSS-first design system for the static Kitepics site. Svelte components provide the presentation structure, while the design tokens keep the existing nautical poster identity consistent across future edits.
 
 ## Principles
 
 - Preserve the editorial, nautical poster character.
 - Prefer existing tokens and component rules over new one-off values.
-- Keep the site lightweight: there is no component framework or build step.
-- Keep map styling scoped to the inline SVG because it is specific to that illustration.
+- Keep the site lightweight: Svelte and Vite build a static output for GitHub Pages.
+- Keep map styling scoped to the `ChartBackground.svelte` SVG because it is specific to that illustration.
 
 ## Tokens
 
-Tokens live in `assets/site.css` under `:root`.
+Tokens live in `src/site.css` under `:root`.
 
 ### Color
 
@@ -52,12 +52,16 @@ Use the most specific semantic token available. Add a new token only when a valu
 | Intro block | `.intro` | A centered italic summary on the panel surface. |
 | Section title | `.section-title`, `.section-title span` | Uses small caps and horizontal rules. |
 | Pick list | `.picks` | Maintains the vertical rhythm between selected photos. |
-| Pick card | `.pick`, `.pick.reverse`, `.pick.portrait` | Uses the two-column editorial layout and responsive stacking. |
+| Pick card | `src/components/PickCard.svelte`, `.pick`, `.pick.reverse`, `.pick.portrait` | Renders one data object with the two-column editorial layout and responsive stacking. |
 | Image frame | `.pick-image`, `.pick-image a`, `.pick-image img` | Keeps images clickable, framed, and visually consistent. |
 | Metadata | `.filename`, `.tag`, `.stars` | Uses small caps, restrained borders, and the star token. |
 | Pick copy | `.pick-text`, `.pick-text h2`, `.pick-text p`, `.note` | Keeps heading, body, and editorial note hierarchy consistent. |
 | Decorative compass | `.compass-wrap` | Provides a quiet closing ornament after the selection. |
 | Footer | `footer` | Uses small caps, a top rule, and the footer color token. |
+
+## Content model
+
+Photo content lives in `src/data/picks.js`. Each pick owns its rank, image metadata, rating, tag, body paragraphs, editorial note, and optional layout flags. `PickCard.svelte` owns the repeated markup, so adding or removing a pick only requires changing the data array.
 
 ## Responsive behavior
 
