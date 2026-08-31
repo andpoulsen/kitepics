@@ -8,6 +8,16 @@ test('static site loads its design system and photo interactions', async ({ page
 
   await page.goto('./');
   await expect(page).toHaveTitle('Kite Session — Farø · May 30 2026 · Poster Picks');
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://andpoulsen.github.io/kitepics/');
+  await expect(page.locator('link[rel="icon"]')).toHaveAttribute('href', /favicon\.svg$/);
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', /Farø, Denmark/);
+  await expect(page.locator('meta[property="og:url"]')).toHaveAttribute('content', 'https://andpoulsen.github.io/kitepics/');
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', /^https:\/\/andpoulsen\.github\.io\/kitepics\/assets\/images\/\S+\.jpg$/);
+  await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute('content', 'summary_large_image');
+  const metadataValues = await page.locator('head meta[content], head link[rel="canonical"]').evaluateAll((elements) =>
+    elements.map((element) => element.getAttribute('content') || element.getAttribute('href')),
+  );
+  expect(metadataValues.every((value) => !/localhost|127\.0\.0\.1|file:\/\//.test(value))).toBe(true);
   await expect(page.locator('link[rel="stylesheet"], head style[data-vite-dev-id]')).not.toHaveCount(0);
   await expect(page.locator('link[rel="preconnect"][href="https://fonts.googleapis.com"]')).toHaveCount(1);
   await expect(page.locator('link[rel="preconnect"][href="https://fonts.gstatic.com"]')).toHaveCount(1);
