@@ -3,12 +3,20 @@
   export let priority = false;
 
   const stars = '★'.repeat(pick.rating) + '☆'.repeat(5 - pick.rating);
-  const imageName = pick.image.split('/').pop().replace(/\.[^.]+$/, '');
+  const imageName = pick.image
+    .split('/')
+    .pop()
+    .replace(/\.[^.]+$/, '');
   const optimizedImageBase = `assets/images/optimized/${imageName}`;
   const imageSizes = '(max-width: 720px) calc(100vw - 124px), min(500px, 50vw)';
 </script>
 
-<article class="pick" class:reverse={pick.reverse} class:portrait={pick.portrait} data-rank={pick.rank}>
+<article
+  class="pick"
+  class:reverse={pick.reverse}
+  class:portrait={pick.portrait}
+  data-rank={pick.rank}
+>
   <figure class="pick-image">
     <a
       href={pick.image}
