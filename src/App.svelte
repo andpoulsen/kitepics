@@ -30,8 +30,8 @@
   <h2 id="selection-title" class="section-title"><span>The Selection</span></h2>
 
   <section class="picks" aria-labelledby="selection-title">
-    {#each picks as pick}
-      <PickCard {pick} />
+    {#each picks as pick, index}
+      <PickCard {pick} priority={index === 0} />
     {/each}
   </section>
 
