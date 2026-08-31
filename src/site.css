@@ -307,6 +307,7 @@
     color: var(--color-footer-label);
     font-family: var(--font-smallcaps);
   }
+  .footer-detail { margin-top: var(--space-xs); }
 
   /* Keep this value aligned with --breakpoint-mobile; custom properties are not supported in media conditions. */
   @media (max-width: 720px) {

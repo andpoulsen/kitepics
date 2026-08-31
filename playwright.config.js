@@ -1,6 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
 
-const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4176';
+const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4176/kitepics/';
 
 export default defineConfig({
   testDir: './tests',
@@ -13,8 +13,8 @@ export default defineConfig({
   webServer: process.env.BASE_URL
     ? undefined
     : {
-        command: 'python3 -m http.server 4176',
-        url: 'http://127.0.0.1:4176',
+        command: 'npm run dev -- --host 127.0.0.1 --port 4176',
+        url: 'http://127.0.0.1:4176/kitepics/',
         reuseExistingServer: true,
         timeout: 15_000,
       },
